@@ -20,10 +20,8 @@ const exploreDisplay = () => {
   if (restaurants === null) {
     return console.log('data kosong');
   }
-  restaurants.map((resto, i) => {
-    if (i < 4) {
-      return writeDataResto(resto);
-    }
+  restaurants.map((resto) => {
+    return writeDataResto(resto);
   });
 };
 

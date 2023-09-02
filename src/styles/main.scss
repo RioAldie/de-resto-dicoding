@@ -78,6 +78,8 @@ nav a:hover {
   transform: translate(260px, 0);
 }
 #btn-menu {
+  min-height: 45px;
+  min-width: 45px;
   display: none;
 }
 main {
@@ -133,9 +135,10 @@ main {
   row-gap: 30px;
   column-gap: 10px;
   align-content: center;
-  grid-template-columns: repeat(4, 2fr);
+  grid-template-columns: repeat(3, 2fr);
   margin: 200px 0px;
   justify-items: center;
+  place-items: center;
 }
 #container h3 {
   position: relative;
@@ -250,7 +253,7 @@ footer {
   margin-top: 100px;
   bottom: 0px;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
   #hero .hero-detail h1 {
     font-size: 32px;
   }

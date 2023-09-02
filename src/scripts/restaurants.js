@@ -5,10 +5,10 @@ const writeDataResto = (resto) => {
     <article class="card">
       <img
         src="${resto.pictureId}"
-        alt=""
+        alt="${resto.name} photo"
         width="300px" height="200px" />
       <div class="card-detail">
-        <h6 class="tes">Rate : 4.6 ★</h6>
+        <h6 class="tes">Rating : ${resto.rating} ★</h6>
         <h5 class="tes">${resto.city}</h5>
         <h4 class="tes">${resto.name}</h4>
       </div>

@@ -192,6 +192,14 @@ article.card .card-detail h6 {
   font-size: 10px;
   font-family: $roboto;
 }
+@media screen and (max-width: 1200px) {
+  #hero {
+    max-width: 100%;
+  }
+  #hero #thumbnail {
+    max-height: 100%;
+  }
+}
 @media screen and (max-width: 992px) {
   #btn-menu {
     display: block;
@@ -220,7 +228,7 @@ article.card .card-detail h6 {
     max-width: 100%;
   }
   #hero #thumbnail {
-    max-height: 800px;
+    max-height: 100%;
   }
   #hero .hero-detail {
     position: relative;

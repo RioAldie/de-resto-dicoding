@@ -1,16 +1,17 @@
-/* eslint-disable import/extensions */
-
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
+// eslint-disable-next-line import/no-unresolved
 import '../styles/main.scss';
 
-import { exploreDisplay } from './restaurants.js';
+import App from './views/app';
 
-exploreDisplay();
-document.getElementById('btn-menu').addEventListener('click', () => {
-  document.getElementById('drawer').classList.toggle('open');
+const app = new App({
+  button: document.querySelector('#btn-menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#mainContent'),
 });
-document.querySelectorAll('a, button, input').forEach((e) => {
-  if (e.offsetWidth < 44 || e.offsetHeight < 44) {
-    console.log(e);
-  }
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+window.addEventListener('load', () => {
+  app.renderPage();
 });

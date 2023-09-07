@@ -1,6 +1,8 @@
 import CONFIG from '../../global/config';
 
-const createRestaurantItem = (resto) => `<a href="#">
+const createRestaurantItem = (
+  resto
+) => `<a href="/#/detail/${resto.id}">
 <article class="card">
   <img
     src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}"
@@ -14,5 +16,16 @@ const createRestaurantItem = (resto) => `<a href="#">
 </article>
 </a>`;
 
-// eslint-disable-next-line import/prefer-default-export
-export { createRestaurantItem };
+const createDetailRestaurant = (resto) => `
+<img
+    src="${CONFIG.BASE_IMAGE_URL}${resto.pictureId}"
+    alt="${resto.name} photo"
+     />
+  <div class="info-detail">
+    <h4 class="tes">${resto.name}</h4> 
+    <h5 class="tes">Rating : ${resto.rating} <span> ★ </span></h5>
+    <h5 class="tes">City: ${resto.city}</h5>
+    <h5>Address: ${resto.address} </h5>
+    <p> ${resto.description}</p>
+  </div>`;
+export { createRestaurantItem, createDetailRestaurant };

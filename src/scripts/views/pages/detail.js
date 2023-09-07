@@ -1,12 +1,22 @@
+import RestaurantsSource from '../../data/restaurants-source';
+import UrlParser from '../../routes/url-parser';
+import { createDetailRestaurant } from '../templates/template-creator';
+
 const Detail = {
   async render() {
     return `
-        <h2>Detail page</h2>
+    <div id="restaurant" class="detail-restaurant"></div>
       `;
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const url = UrlParser.parseActiveUrlWithoutCombiner();
+    const resto = await RestaurantsSource.detailRestaurant(url.id);
+    console.log(resto.restaurant);
+    const restoContainer = document.querySelector('#restaurant');
+    restoContainer.innerHTML = createDetailRestaurant(
+      resto.restaurant
+    );
   },
 };
 

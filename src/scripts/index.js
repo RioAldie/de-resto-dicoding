@@ -1,6 +1,6 @@
 import 'regenerator-runtime';
-// eslint-disable-next-line import/no-unresolved
 import '../styles/main.scss';
+import '../styles/responsive.scss';
 
 import App from './views/app';
 

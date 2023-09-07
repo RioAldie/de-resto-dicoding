@@ -2,12 +2,10 @@ import API_ENDPOINT from '../global/api-endpoint.js';
 
 class RestaurantsSource {
   static async listRestaurants() {
-    console.log(API_ENDPOINT.LIST_RESTAURANT);
     const response = await fetch(API_ENDPOINT.LIST_RESTAURANT);
 
     const responseJson = await response.json();
 
-    console.log(responseJson);
     return responseJson.restaurants;
   }
 

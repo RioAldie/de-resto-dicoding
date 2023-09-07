@@ -91,6 +91,18 @@ main {
   min-height: 100vh;
   padding: 0;
 }
+footer {
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  color: #fff;
+  font-family: $kaushan;
+  background: $dark-secondary;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  bottom: 0px;
+}
 #hero {
   max-width: 90%;
 }
@@ -200,7 +212,6 @@ article.card .card-detail h6 {
   width: 60%;
   display: flex;
   flex-direction: column;
-  border: #fff solid 1px;
 }
 #restaurant img {
   max-width: 100%;
@@ -231,4 +242,69 @@ article.card .card-detail h6 {
 .info-detail p {
   font-family: $roboto;
   font-size: 14px;
+}
+#menu {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+#menu h4 {
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+}
+#menu div {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#menu div .menu-item {
+  min-width: 120px;
+  min-height: 44px;
+  max-width: max-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: $dark-secondary;
+  color: #bfbfbf;
+  font-family: $roboto;
+  font-size: 16px;
+}
+#review {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+#review h4 {
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+}
+#review div {
+  background: #272727;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+#review div h5 {
+  font-family: $kaushan;
+  font-size: 18px;
+  color: #fff;
+}
+#review div h6 {
+  font-family: $roboto;
+  font-size: 16px;
+  color: #bfbfbf;
+}
+#review div p {
+  font-family: $roboto;
+  color: #fff;
+  font-size: 16px;
 }

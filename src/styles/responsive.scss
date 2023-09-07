@@ -60,20 +60,11 @@ $roboto: 'Roboto', sans-serif;
     grid-column-start: 1;
     grid-column-end: 3;
   }
+  #restaurant {
+    width: 100%;
+  }
 }
 
-footer {
-  width: 100%;
-  min-height: 100px;
-  max-height: 200px;
-  color: #fff;
-  font-family: $kaushan;
-  background: $dark-secondary;
-  display: grid;
-  place-items: center;
-  margin-top: 100px;
-  bottom: 0px;
-}
 @media screen and (max-width: 660px) {
   #hero .hero-detail h1 {
     font-size: 32px;
@@ -89,5 +80,8 @@ footer {
   }
   footer p {
     font-size: 14px;
+  }
+  #restaurant {
+    width: 100%;
   }
 }

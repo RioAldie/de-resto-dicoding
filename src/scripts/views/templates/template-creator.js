@@ -27,5 +27,30 @@ const createDetailRestaurant = (resto) => `
     <h5 class="tes">City: ${resto.city}</h5>
     <h5>Address: ${resto.address} </h5>
     <p> ${resto.description}</p>
-  </div>`;
-export { createRestaurantItem, createDetailRestaurant };
+  </div>
+  <div id="menu">
+    <h4>Food Menu</h4>
+    <div id="box-food"></div>
+    <h4>Drink Menu</h4>
+    <div id="box-drink"></div>
+  </div>
+  <div id="review">
+  <h4>Customer Review</h4>
+  </div>
+  `;
+
+const createMenuItemTemplate = (item) => `<div class="menu-item">
+  ${item.name}
+</div>`;
+
+const createReviewTemplate = (review) => `<div>
+  <h5>${review.name}</h5>
+  <h6>${review.date}</h6>
+  <p>"${review.review}"</p>
+</div>`;
+export {
+  createRestaurantItem,
+  createDetailRestaurant,
+  createMenuItemTemplate,
+  createReviewTemplate,
+};

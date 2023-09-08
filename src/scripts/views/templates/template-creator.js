@@ -48,9 +48,24 @@ const createReviewTemplate = (review) => `<div>
   <h6>${review.date}</h6>
   <p>"${review.review}"</p>
 </div>`;
+
+const createLikeButtonTemplate = () => `
+  <button aria-label="add this resto to favorite " id="likeButton" class="like">
+  <i class="fa fa-star-o" aria-hidden="true"></i>
+  </button>
+`;
+
+const createLikedButtonTemplate = () => `
+  <button aria-label="unfavorite this resto" id="likeButton" class="like">
+  <i class="fa fa-star" aria-hidden="true"></i>
+  </button>
+`;
+
 export {
   createRestaurantItem,
   createDetailRestaurant,
   createMenuItemTemplate,
   createReviewTemplate,
+  createLikeButtonTemplate,
+  createLikedButtonTemplate,
 };

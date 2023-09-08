@@ -308,3 +308,35 @@ article.card .card-detail h6 {
   color: #fff;
   font-size: 16px;
 }
+.like {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 24px;
+  color: #121212;
+  cursor: pointer;
+}
+#favorite-container {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#favorite-container h4 {
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  color: #fff;
+}

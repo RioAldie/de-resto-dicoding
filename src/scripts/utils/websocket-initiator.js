@@ -1,4 +1,3 @@
-import CONFIG from '../global/config';
 import NotificationHelper from './notification-helper';
 
 const WebSocketInitiator = {
@@ -14,7 +13,6 @@ const WebSocketInitiator = {
       title: `${restaurant.name} is open, Now!`,
       options: {
         body: restaurant.description,
-        image: `${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}`,
       },
     });
   },

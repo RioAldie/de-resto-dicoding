@@ -1,5 +1,8 @@
 import RestaurantsSource from '../../data/restaurants-source.js';
-import { createRestaurantItem } from '../templates/template-creator.js';
+import {
+  createLoadingTemplate,
+  createRestaurantItem,
+} from '../templates/template-creator.js';
 
 const Home = {
   async render() {
@@ -20,8 +23,13 @@ const Home = {
   },
 
   async afterRender() {
-    const restaurants = await RestaurantsSource.listRestaurants();
     const container = document.querySelector('#container');
+    container.innerHTML = createLoadingTemplate();
+    const restaurants =
+      await RestaurantsSource.listRestaurants().finally(() => {
+        container.innerHTML = '';
+      });
+
     restaurants.forEach((resto) => {
       container.innerHTML += createRestaurantItem(resto);
     });

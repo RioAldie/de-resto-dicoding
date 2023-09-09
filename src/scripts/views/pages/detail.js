@@ -4,6 +4,7 @@ import AddReviewInitiator from '../../utils/add-review-initiator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import {
   createDetailRestaurant,
+  createLoadingTemplate,
   createMenuItemTemplate,
   createReviewTemplate,
 } from '../templates/template-creator';
@@ -18,11 +19,17 @@ const Detail = {
 
   async afterRender() {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
-    const result = await RestaurantsSource.detailRestaurant(url.id);
+    const restoContainer = document.querySelector('#restaurant');
+    restoContainer.innerHTML = createLoadingTemplate();
+    const result = await RestaurantsSource.detailRestaurant(
+      url.id
+    ).finally(() => {
+      // restoContainer.innerHTML = '';
+    });
     const { restaurant } = result;
     const { menus, customerReviews } = restaurant;
     const { foods, drinks } = menus;
-    const restoContainer = document.querySelector('#restaurant');
+
     restoContainer.innerHTML = createDetailRestaurant(restaurant);
     const foodContainer = document.querySelector('#box-food');
     const drinkContainer = document.querySelector('#box-drink');

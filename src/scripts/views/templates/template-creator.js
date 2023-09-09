@@ -70,6 +70,11 @@ const createLikedButtonTemplate = () => `
   </button>
 `;
 
+const createLoadingTemplate = () =>
+  `<div class="loading">
+    Loading...
+  </div>`;
+
 export {
   createRestaurantItem,
   createDetailRestaurant,
@@ -77,4 +82,5 @@ export {
   createReviewTemplate,
   createLikeButtonTemplate,
   createLikedButtonTemplate,
+  createLoadingTemplate,
 };

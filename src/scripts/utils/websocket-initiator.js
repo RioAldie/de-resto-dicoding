@@ -1,3 +1,6 @@
+import CONFIG from '../global/config';
+import NotificationHelper from './notification-helper';
+
 const WebSocketInitiator = {
   init(url) {
     const webSocket = new WebSocket(url);
@@ -5,8 +8,15 @@ const WebSocketInitiator = {
   },
 
   _onMessageHandler(message) {
-    console.log(message.data);
-    console.log(JSON.parse(message.data));
+    const restaurant = JSON.parse(message.data);
+
+    NotificationHelper.sendNotification({
+      title: `${restaurant.name} is open, Now!`,
+      options: {
+        body: restaurant.description,
+        image: `${CONFIG.BASE_IMAGE_URL + restaurant.pictureId}`,
+      },
+    });
   },
 };
 export default WebSocketInitiator;

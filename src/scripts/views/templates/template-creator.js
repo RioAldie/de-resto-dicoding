@@ -34,8 +34,17 @@ const createDetailRestaurant = (resto) => `
     <h4>Drink Menu</h4>
     <div id="box-drink"></div>
   </div>
-  <div id="review">
-  <h4>Customer Review</h4>
+  <div id="review-container">
+    <h4>Customer Review</h4>
+    <div id="review"></div>
+    <div id="form-review">
+    <h4> Add Review </h4>
+      <label for="name">Name :</label>
+        <input id="input-name">
+        <label for="body"> Your Review:</label>
+        <textarea id="input-body" cols="20" rows="10"></textarea>
+          <button type="submit" id="form-review-button">Save</button>
+    </div>
   </div>
   `;
 

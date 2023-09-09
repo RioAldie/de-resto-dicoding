@@ -1,5 +1,6 @@
 import RestaurantsSource from '../../data/restaurants-source';
 import UrlParser from '../../routes/url-parser';
+import AddReviewInitiator from '../../utils/add-review-initiator';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import {
   createDetailRestaurant,
@@ -49,6 +50,18 @@ const Detail = {
         rating: restaurant.rating,
         pictureId: restaurant.pictureId,
       },
+    });
+
+    // get data review from input
+
+    const formReviewButton = document.querySelector(
+      '#form-review-button'
+    );
+
+    AddReviewInitiator.init({
+      formReviewButton,
+
+      id: restaurant.id,
     });
   },
 };

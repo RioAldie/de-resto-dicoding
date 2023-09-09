@@ -5,6 +5,9 @@ $dark-secondary: #272727;
 $kaushan: 'Kaushan Script', cursive;
 $roboto: 'Roboto', sans-serif;
 
+a {
+  text-decoration: none;
+}
 img {
   display: block;
 }
@@ -275,6 +278,14 @@ article.card .card-detail h6 {
   font-family: $roboto;
   font-size: 16px;
 }
+#review-container {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
 #review {
   display: flex;
   max-width: 100%;
@@ -283,10 +294,30 @@ article.card .card-detail h6 {
   padding: 20px;
   gap: 20px;
 }
-#review h4 {
+#review-container h4 {
   font-family: $kaushan;
   font-size: 18px;
   font-weight: 600;
+}
+#review-container .box-info-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10px;
+  align-items: center;
+}
+#review-container .box-info-review a {
+  width: 44px;
+  height: 44px;
+  color: $dark-primary;
+  background: #fff;
+  border: #bfbfbf solid 1px;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 #review div {
   background: #272727;
@@ -339,4 +370,51 @@ article.card .card-detail h6 {
   font-weight: 600;
   width: 100%;
   color: #fff;
+}
+#form-review {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#form-review h4 {
+  width: 100%;
+  text-align: start;
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+}
+#form-review label {
+  width: 90%;
+  color: #bfbfbf;
+  font-family: $roboto;
+  font-size: 16px;
+}
+#form-review input {
+  width: 90%;
+  font-size: 16px;
+  height: 50px;
+  border: #bfbfbf solid 2px;
+  background: #272727;
+  color: #bfbfbf;
+}
+#form-review textarea {
+  width: 90%;
+  height: 200px;
+  font-size: 16px;
+  border: #bfbfbf solid 2px;
+  background: #272727;
+  color: #bfbfbf;
+}
+#form-review button {
+  width: 200px;
+  height: 44px;
+  border: #272727 solid 1px;
+  background: #fff;
+  font-family: $kaushan;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
 }

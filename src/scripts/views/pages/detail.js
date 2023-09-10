@@ -21,11 +21,7 @@ const Detail = {
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const restoContainer = document.querySelector('#restaurant');
     restoContainer.innerHTML = createLoadingTemplate();
-    const result = await RestaurantsSource.detailRestaurant(
-      url.id
-    ).finally(() => {
-      // restoContainer.innerHTML = '';
-    });
+    const result = await RestaurantsSource.detailRestaurant(url.id);
     const { restaurant } = result;
     const { menus, customerReviews } = restaurant;
     const { foods, drinks } = menus;

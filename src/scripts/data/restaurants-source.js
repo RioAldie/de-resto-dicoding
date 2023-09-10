@@ -6,7 +6,7 @@ class RestaurantsSource {
 
     const responseJson = await response.json();
 
-    return responseJson.restaurants;
+    return responseJson;
   }
 
   static async detailRestaurant(id) {

@@ -418,3 +418,13 @@ article.card .card-detail h6 {
   font-size: 16px;
   cursor: pointer;
 }
+.not-found {
+  color: #fff;
+  font-family: $roboto;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
+}

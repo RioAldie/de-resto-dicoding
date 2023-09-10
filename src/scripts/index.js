@@ -5,8 +5,8 @@ import '../styles/animation.scss';
 import App from './views/app';
 import swRegister from './utils/sw-register';
 
-// import WebSocketInitiator from './utils/websocket-initiator';
-// import CONFIG from './global/config';
+import WebSocketInitiator from './utils/websocket-initiator';
+import CONFIG from './global/config';
 
 const app = new App({
   button: document.querySelector('#btn-menu'),
@@ -21,5 +21,5 @@ window.addEventListener('load', () => {
   swRegister();
 
   // Saya mematikan websocket dan notifikasi karena api tidak menyediakan wss.
-  // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });

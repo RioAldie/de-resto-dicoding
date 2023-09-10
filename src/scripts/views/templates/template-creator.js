@@ -75,6 +75,10 @@ const createLoadingTemplate = () =>
     Loading...
   </div>`;
 
+const createDataNotFoundTemplate = () =>
+  `<div class="not-found">
+    Data Tidak Ditemukan
+  </div>`;
 export {
   createRestaurantItem,
   createDetailRestaurant,
@@ -83,4 +87,5 @@ export {
   createLikeButtonTemplate,
   createLikedButtonTemplate,
   createLoadingTemplate,
+  createDataNotFoundTemplate,
 };

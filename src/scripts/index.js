@@ -1,13 +1,25 @@
-import 'regenerator-runtime'; /* for async await transpile */
+import 'regenerator-runtime';
 import '../styles/main.scss';
-import { exploreDisplay } from './restaurants.js';
+import '../styles/responsive.scss';
+import '../styles/animation.scss';
+import App from './views/app';
+import swRegister from './utils/sw-register';
 
-exploreDisplay();
-document.getElementById('btn-menu').addEventListener('click', () => {
-  document.getElementById('drawer').classList.toggle('open');
+import WebSocketInitiator from './utils/websocket-initiator';
+import CONFIG from './global/config';
+
+const app = new App({
+  button: document.querySelector('#btn-menu'),
+  drawer: document.querySelector('#drawer'),
+  content: document.querySelector('#mainContent'),
 });
-document.querySelectorAll('a, button, input').forEach((e) => {
-  if (e.offsetWidth < 44 || e.offsetHeight < 44) {
-    console.log(e);
-  }
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+window.addEventListener('load', () => {
+  app.renderPage();
+  swRegister();
+
+  // Saya mematikan websocket dan notifikasi karena api tidak menyediakan wss.
+  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
 });

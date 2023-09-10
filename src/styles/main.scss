@@ -5,6 +5,9 @@ $dark-secondary: #272727;
 $kaushan: 'Kaushan Script', cursive;
 $roboto: 'Roboto', sans-serif;
 
+a {
+  text-decoration: none;
+}
 img {
   display: block;
 }
@@ -90,6 +93,18 @@ main {
   margin-top: 50px;
   min-height: 100vh;
   padding: 0;
+}
+footer {
+  width: 100%;
+  min-height: 100px;
+  max-height: 200px;
+  color: #fff;
+  font-family: $kaushan;
+  background: $dark-secondary;
+  display: grid;
+  place-items: center;
+  margin-top: 100px;
+  bottom: 0px;
 }
 #hero {
   max-width: 90%;
@@ -195,89 +210,221 @@ article.card .card-detail h6 {
   font-size: 10px;
   font-family: $roboto;
 }
-@media screen and (max-width: 1200px) {
-  #hero {
-    max-width: 100%;
-  }
-  #hero #thumbnail {
-    max-height: 100%;
-  }
+#restaurant {
+  color: #fff;
+  width: 60%;
+  display: flex;
+  flex-direction: column;
 }
-@media screen and (max-width: 992px) {
-  #btn-menu {
-    display: block;
-    max-width: 100px;
-    min-width: 70px;
-    height: 44px;
-    padding: 0;
-    font-size: 24px;
-    background-color: #272727;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    margin-left: 20%;
-  }
-  #drawer {
-    width: 250px;
-    height: 200px;
-    top: 80px;
-    left: -260px;
-    position: absolute;
-    transition: transform 1s ease-in-out;
-    background-color: $dark-secondary;
-    grid-template-rows: 1fr 1fr 1fr;
-  }
-  #hero {
-    max-width: 100%;
-  }
-  #hero #thumbnail {
-    max-height: 100%;
-  }
-  #hero .hero-detail {
-    position: relative;
-    margin-top: 20px;
-  }
-  #hero .hero-detail h1 {
-    font-size: 62px;
-  }
-  #hero .hero-detail h2 {
-    font-size: 28px;
-  }
-  #container {
-    grid-template-columns: 1fr 1fr;
-  }
-  #container h3 {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
+#restaurant img {
+  max-width: 100%;
+  max-height: 500px;
+}
+.info-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+}
+.info-detail h4 {
+  text-align: center;
+  margin: 0;
+  font-size: 20px;
+  font-family: $kaushan;
 }
 
-footer {
-  width: 100%;
-  min-height: 100px;
-  max-height: 200px;
-  color: #fff;
-  font-family: $kaushan;
-  background: $dark-secondary;
-  display: grid;
-  place-items: center;
-  margin-top: 100px;
-  bottom: 0px;
+.info-detail h5 {
+  margin: 0;
+  font-size: 16px;
+  font-family: $roboto;
 }
-@media screen and (max-width: 660px) {
-  #hero .hero-detail h1 {
-    font-size: 32px;
-  }
-  #hero .hero-detail h2 {
-    font-size: 20px;
-  }
-  #container {
-    grid-template-columns: 1fr;
-  }
-  #container h3 {
-    display: none;
-  }
-  footer p {
-    font-size: 14px;
-  }
+.info-detail h5 span {
+  color: yellow;
+}
+
+.info-detail p {
+  font-family: $roboto;
+  font-size: 14px;
+}
+#menu {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+#menu h4 {
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+}
+#menu div {
+  display: flex;
+  max-width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#menu div .menu-item {
+  min-width: 120px;
+  min-height: 44px;
+  max-width: max-content;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: $dark-secondary;
+  color: #bfbfbf;
+  font-family: $roboto;
+  font-size: 16px;
+}
+#review-container {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+#review {
+  display: flex;
+  max-width: 100%;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 20px;
+  gap: 20px;
+}
+#review-container h4 {
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+}
+#review-container .box-info-review {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-right: 10px;
+  align-items: center;
+}
+#review-container .box-info-review a {
+  width: 44px;
+  height: 44px;
+  color: $dark-primary;
+  background: #fff;
+  border: #bfbfbf solid 1px;
+  border-radius: 5px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+#review div {
+  background: #272727;
+  padding: 0px 20px;
+  box-sizing: border-box;
+}
+#review div h5 {
+  font-family: $kaushan;
+  font-size: 18px;
+  color: #fff;
+}
+#review div h6 {
+  font-family: $roboto;
+  font-size: 16px;
+  color: #bfbfbf;
+}
+#review div p {
+  font-family: $roboto;
+  color: #fff;
+  font-size: 16px;
+}
+.like {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  position: fixed;
+  bottom: 20px;
+  right: 16px;
+  border-radius: 50%;
+  border: 0;
+  font-size: 24px;
+  color: #121212;
+  cursor: pointer;
+}
+#favorite-container {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+#favorite-container h4 {
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+  width: 100%;
+  color: #fff;
+}
+#form-review {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+#form-review h4 {
+  width: 100%;
+  text-align: start;
+  font-family: $kaushan;
+  font-size: 18px;
+  font-weight: 600;
+}
+#form-review label {
+  width: 90%;
+  color: #bfbfbf;
+  font-family: $roboto;
+  font-size: 16px;
+}
+#form-review input {
+  width: 90%;
+  font-size: 16px;
+  height: 50px;
+  border: #bfbfbf solid 2px;
+  background: #272727;
+  color: #bfbfbf;
+}
+#form-review textarea {
+  width: 90%;
+  height: 200px;
+  font-size: 16px;
+  border: #bfbfbf solid 2px;
+  background: #272727;
+  color: #bfbfbf;
+}
+#form-review button {
+  width: 200px;
+  height: 44px;
+  border: #272727 solid 1px;
+  background: #fff;
+  font-family: $kaushan;
+  color: #000;
+  font-size: 16px;
+  cursor: pointer;
+}
+.not-found {
+  color: #fff;
+  font-family: $roboto;
+  font-size: 18px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 300px;
 }

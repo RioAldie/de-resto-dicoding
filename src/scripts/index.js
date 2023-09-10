@@ -13,6 +13,7 @@ const app = new App({
   drawer: document.querySelector('#drawer'),
   content: document.querySelector('#mainContent'),
 });
+
 window.addEventListener('hashchange', () => {
   app.renderPage();
 });
@@ -22,4 +23,10 @@ window.addEventListener('load', () => {
 
   // Saya mematikan websocket dan notifikasi karena api tidak menyediakan wss.
   WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+});
+const skipToContent = document.querySelector('.skip-link');
+skipToContent.addEventListener('click', (event) => {
+  event.preventDefault();
+  console.log('onlcik');
+  document.querySelector('main').focus();
 });
